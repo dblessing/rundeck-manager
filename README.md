@@ -1,24 +1,16 @@
-# RundeckManager
+# Rundeck Manager Gem
 
-TODO: Write a gem description
+[Website](http://dblessing.github.io/rundeck-manager)
 
-## Installation
+## Work in progress. Not yet stable
 
-Add this line to your application's Gemfile:
+[![Gem Version](https://badge.fury.io/rb/rundeck-manager.svg)](http://badge.fury.io/rb/rundeck-manager)
+[![Build Status](https://travis-ci.org/dblessing/rundeck-manager.svg?branch=master)](https://travis-ci.org/dblessing/rundeck-manager)
+[![Dependency Status](https://gemnasium.com/dblessing/rundeck-manager.svg)](https://gemnasium.com/dblessing/rundeck-manager)
+[![Code Climate](https://codeclimate.com/github/dblessing/rundeck-manager/badges/gpa.svg)](https://codeclimate.com/github/dblessing/rundeck-manager)
+[![Test Coverage](https://codeclimate.com/github/dblessing/rundeck-manager/badges/coverage.svg)](https://codeclimate.com/github/dblessing/rundeck-manager)
 
-    gem 'rundeck-manager'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rundeck-manager
-
-## Usage
-
-TODO: Write usage instructions here
+See http://dblessing.github.io/rundeck-manager for documentation
 
 ## Contributing
 
@@ -27,3 +19,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+Released under the BSD 2-clause license. See LICENSE.txt for details.

@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1
+script:
+  - bundle exec rake
+  - bundle exec rubocop
+addons:
+  code_climate:
+    repo_token: 87fa8f1be890ebc943f3191bbbf20a9ce7c0a9e9df567e8557dfa6cbe60801ba
