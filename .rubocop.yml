@@ -1,0 +1,12 @@
+# This is the configuration used to check the rubocop source code.
+
+inherit_from: .rubocop_todo.yml
+
+# Lots of crappy false-positives from this cop. Go home!
+GuardClause:
+  Enabled: false
+
+# I am a big fan of lines 80 chars and less. However, in some cases it makes
+# sense to let the line exceed that length, especially in specs.
+Metrics/LineLength:
+  Max: 500
