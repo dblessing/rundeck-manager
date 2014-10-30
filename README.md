@@ -1,4 +1,4 @@
-# Rundeck::Manager
+# RundeckManager
 
 TODO: Write a gem description
 
