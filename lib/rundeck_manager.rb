@@ -1,7 +1,7 @@
 require 'rundeck'
-require 'rundeck-manager/configuration'
-require 'rundeck-manager/client'
-require 'rundeck-manager/version'
+require 'rundeck_manager/configuration'
+require 'rundeck_manager/client'
+require 'rundeck_manager/version'
 
 module RundeckManager
   extend Configuration

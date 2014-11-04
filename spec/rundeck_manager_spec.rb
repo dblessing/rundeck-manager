@@ -13,6 +13,11 @@ describe RundeckManager do
   it { is_expected.to respond_to(:api_token) }
   it { is_expected.to respond_to(:api_token=) }
 
+  describe '.client' do
+    subject { RundeckManager.client }
+    it { is_expected.to be_a RundeckManager::Client }
+  end
+
   describe '.configure' do
     RundeckManager::Configuration::VALID_OPTIONS_KEYS.each do |key|
       context "when setting #{key}" do
