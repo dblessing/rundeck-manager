@@ -38,7 +38,7 @@ describe RundeckManager do
           end
         end
         if key == :endpoint
-          it { is_expected.to include(key.to_s)}
+          it { is_expected.to include(key.to_s) }
         else
           it { is_expected.to eq(key) }
         end

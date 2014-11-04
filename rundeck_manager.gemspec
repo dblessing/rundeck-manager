@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rundeck-manager/version'
+require 'rundeck_manager/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rundeck-manager'
+  spec.name          = 'rundeck_manager'
   spec.version       = RundeckManager::VERSION
   spec.authors       = ['Drew A. Blessing']
   spec.email         = ['drew.blessing@mac.com']
@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'http://dblessing.github.io/rundeck-manager'
   spec.license       = 'BSD-2-Clause'
 
-  spec.files         = `git ls-files`.split($/)
+  spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   spec.executables   = spec.files.grep(/^bin\//) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(/^(test|spec|features)\//)
   spec.require_paths = ['lib']
