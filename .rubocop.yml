@@ -10,3 +10,6 @@ GuardClause:
 # sense to let the line exceed that length, especially in specs.
 Metrics/LineLength:
   Max: 500
+
+Style/RegexpLiteral:
+  Enabled: false

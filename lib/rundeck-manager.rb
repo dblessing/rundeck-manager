@@ -1,23 +1,26 @@
 require 'rundeck'
 require 'rundeck-manager/configuration'
-require 'rundeck-manager/objects'
+require 'rundeck-manager/client'
 require 'rundeck-manager/version'
 
 module RundeckManager
   extend Configuration
 
-  include Objects
+  # Alias for Rundeck::Client.new
+  #
+  # @return [Rundeck::Client]
+  def self.client(options = {})
+    RundeckManager::Client.new(options)
+  end
 
-  # @private
-  attr_accessor(*Configuration::VALID_OPTIONS_KEYS)
+  # Delegate to Gitlab::Client
+  def self.method_missing(method, *args, &block)
+    return super unless client.respond_to?(method)
+    client.send(method, *args, &block)
+  end
 
-  def initialize(options = {})
-    options = RundeckManager.options.merge(options)
-    opt_keys = Configuration::VALID_OPTIONS_KEYS
-        .concat(Configuration::VALID_RD_OPTIONS_KEYS)
-
-    opt_keys.each do |key|
-      send("#{key}=", options[key]) if options.has_key?(key)
-    end
+  # Delegate to Gitlab::Client
+  def self.respond_to?(method)
+    client.respond_to?(method) || super
   end
 end
