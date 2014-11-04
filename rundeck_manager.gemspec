@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rundeck_manager/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rundeck_manager'
+  spec.name          = 'rundeck-manager'
   spec.version       = RundeckManager::VERSION
   spec.authors       = ['Drew A. Blessing']
   spec.email         = ['drew.blessing@mac.com']
@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 1.9.3'
 
   spec.add_runtime_dependency 'rundeck', '~> 0.0.4'
+  spec.add_runtime_dependency 'thor'
 
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'

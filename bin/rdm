@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'rundeck_manager/cli'
+
+RundeckManager::CLI.start
